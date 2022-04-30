@@ -1,0 +1,6 @@
+/Scripts
+/Lib
+/Include
+serviceAccountKey.json
+pyvenv.cfg
+/__pycache__
