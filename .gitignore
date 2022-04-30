@@ -4,3 +4,4 @@
 serviceAccountKey.json
 pyvenv.cfg
 /__pycache__
+google-services.json
