@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">fireproject</string>
-    <string name="app_text">IOT Fire Alarm Project \n Ritvick Lohani</string>
+    <string name="IOT">2k19/EC/150 Ritvick Lohani\n2k19/EC/190 Sudeep Saurabh\n2k19/EC/191 Swapnil Gaur</string>
+    <string name="channel_name">Business Alarms</string>
+    <string name="channel_desc">Alarms sent from the IoT Embedded System of the Business</string>
 </resources>
