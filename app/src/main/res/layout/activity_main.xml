@@ -39,7 +39,6 @@
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
         android:autoSizeMinTextSize="24sp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
@@ -51,8 +50,8 @@
 
     <TextView
         android:id="@+id/countInt"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="283dp"
+        android:layout_height="173dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="0"
