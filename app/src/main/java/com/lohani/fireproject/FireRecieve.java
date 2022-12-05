@@ -87,13 +87,6 @@ public class FireRecieve extends FirebaseMessagingService {
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
                 .setChannelId(notifyid)
                 .build();
-//        Notification noti =
-//                new NotificationCompat.Builder(this,"1")
-//                        .setSmallIcon(R.drawable.ic_launcher_background)
-//                        .setContentTitle("My notification")
-//                        .setContentText("Hello World!")
-//                        .setChannelId("1").build();
-//        NotificationManager nm = NotificationManagerCompat.from(1,noti);
         nm.notify(1, noti);
 
     }
