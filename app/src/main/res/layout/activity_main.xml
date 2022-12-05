@@ -54,7 +54,7 @@
         android:layout_height="173dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:text="0"
+        android:text="@string/countIntText"
         android:textDirection="locale"
         android:textSize="48sp"
         android:textStyle="bold"
