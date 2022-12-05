@@ -7,6 +7,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.util.Log;
@@ -34,6 +35,7 @@ public class FireRecieve extends FirebaseMessagingService {
 
         super.onMessageReceived(remoteMessage);
         Log.d("MessageRecieved", "TRUE");
+        Log.d(String.valueOf(remoteMessage.getData()),"TRUE");
 //        AppDatabase db = Room.databaseBuilder(getApplicationContext(),
 //                AppDatabase.class, "eventsdatabase").build();
 //        EventsDao eventsDao =  db.eventsDao();
@@ -44,7 +46,20 @@ public class FireRecieve extends FirebaseMessagingService {
 //        eventsDao.insertAll(e);
         String messageTitle = remoteMessage.getData().get("title");
         String messageDesc = remoteMessage.getData().get("desc");
-        sendNotification(messageTitle, messageDesc);
+        if(messageTitle != null) {
+            sendNotification(messageTitle, messageDesc);
+        }
+        else{
+            String pc = remoteMessage.getData().get("personCount");
+            SharedPreferences sharedPreferences = this.getSharedPreferences("VALUESTORE",this.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("personCount",pc);
+            editor.apply();
+        }
+
+
+
+
     }
 
     public void sendNotification(String messageTitle, String messageDesc) {
@@ -72,13 +87,6 @@ public class FireRecieve extends FirebaseMessagingService {
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
                 .setChannelId(notifyid)
                 .build();
-//        Notification noti =
-//                new NotificationCompat.Builder(this,"1")
-//                        .setSmallIcon(R.drawable.ic_launcher_background)
-//                        .setContentTitle("My notification")
-//                        .setContentText("Hello World!")
-//                        .setChannelId("1").build();
-//        NotificationManager nm = NotificationManagerCompat.from(1,noti);
         nm.notify(1, noti);
 
     }
