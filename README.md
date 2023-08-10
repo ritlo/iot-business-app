@@ -3,4 +3,4 @@ Source code for Major Project: Helping Businesses with IoT Embedded Systems - An
 
 [![DOI](https://zenodo.org/badge/574233993.svg)](https://zenodo.org/badge/latestdoi/574233993)
 
-[Embedded System Repository](https://github.com/ritlo/iot-business-app)
+[Embedded System Repository](https://github.com/ritlo/iot-business)
